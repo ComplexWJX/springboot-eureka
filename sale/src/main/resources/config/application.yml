@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: paas-sale  #服务名
+  profiles:
+    active: dev
+  jackson:
+    time-zone: GMT+8
+  jmx:
+    default-domain: paas-sale
+mybatis:
+  mapper-locations: classpath:mybatis/*/*.xml
+
+# pageHelper配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+# logback日志配置
+logging:
+  config: classpath:config/logback-spring.xml
+# eureka 配置
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 3
+  client:
+    registry-fetch-interval-seconds: 30
