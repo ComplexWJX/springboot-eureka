@@ -88,7 +88,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
     <!--打印SQL-->
     <logger name="com.ai.ctc.portal.*.dao" level="DEBUG"/>
 
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="stdout"/>
         <appender-ref ref="appLogAppender"/>
     </root>

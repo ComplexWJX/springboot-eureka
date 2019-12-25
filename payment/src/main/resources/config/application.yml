@@ -18,6 +18,7 @@ pagehelper:
 # logback日志配置
 logging:
   config: classpath:config/logback-spring.xml
+  level: info
 # eureka 配置
 eureka:
   instance:
