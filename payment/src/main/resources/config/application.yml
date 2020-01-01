@@ -8,7 +8,7 @@ spring:
   jmx:
     default-domain: paas-sale
 mybatis:
-  mapper-locations: classpaths:mybati/*/*.xml
+  mapper-locations: classpath:mybatis/*/*.xml
 
 # pageHelper配置
 pagehelper:
@@ -18,7 +18,6 @@ pagehelper:
 # logback日志配置
 logging:
   config: classpath:config/logback-spring.xml
-  level: info
 # eureka 配置
 eureka:
   instance:
