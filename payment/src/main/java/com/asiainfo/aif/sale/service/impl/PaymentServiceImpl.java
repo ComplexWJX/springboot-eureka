@@ -27,7 +27,6 @@ public class PaymentServiceImpl implements IPaymentService {
     private PaymentDao paymentDao;
 
 
-
     @LcnTransaction(propagation = DTXPropagation.SUPPORTS)
     @Transactional
     @Override
