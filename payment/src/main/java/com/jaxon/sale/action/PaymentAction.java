@@ -21,8 +21,8 @@ public class PaymentAction {
     private IPaymentService paymentService;
 
     @RequestMapping("/save")
-    String pay(@RequestParam("serOrderId") String serOrderId){
+    String pay(@RequestParam("serOrderId") String serOrderId) {
         paymentService.save(serOrderId);
-        return "success execute:"+serOrderId;
+        return "success execute:" + serOrderId;
     }
 }

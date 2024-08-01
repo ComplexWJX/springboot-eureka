@@ -26,7 +26,7 @@ public class SaleServiceImpl implements ISaleService {
     @Override
     public String save(String orderNo) {
         String result = paymentRest.pay(UUID.randomUUID().toString() + ":" + orderNo);
-        int i = 100/Integer.parseInt(orderNo);
+        int i = 100 / Integer.parseInt(orderNo);
         return result;
     }
 }

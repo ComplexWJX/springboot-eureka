@@ -23,24 +23,24 @@ public class SaleAccess {
     @Autowired
     private ISaleService saleService;
 
-    @RequestMapping(value = "/build",method = {RequestMethod.GET,RequestMethod.POST})
+    @RequestMapping(value = "/build", method = {RequestMethod.GET, RequestMethod.POST})
     @HystrixCommand(fallbackMethod = "fallback")
-    public  String buildOrder(@RequestParam("serOrderId") String serOrderId) {
+    public String buildOrder(@RequestParam("serOrderId") String serOrderId) {
         String result;
         try {
             result = saleService.save(serOrderId);
             log.info(result);
         } catch (Exception e) {
             e.printStackTrace();
-            log.error("call failed",e);
+            log.error("call failed", e);
 //            result = "build order failed.";
             throw e;
         }
         return result;
     }
 
-    public  String fallback(@RequestParam("serOrderId") String serOrderId) {
-        String result = "could not server for["+serOrderId+"].";
+    public String fallback(@RequestParam("serOrderId") String serOrderId) {
+        String result = "could not server for[" + serOrderId + "].";
         return result;
     }
 }
